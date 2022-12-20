@@ -36,7 +36,11 @@ export default function Login() {
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label style={{marginRight: "340px"}}>Password</Form.Label>
                         <Form.Control style={{width: "400px"}} type="password" ref={pwdRef} placeholder="Password" autoComplete='off' required />
+                        <Form.Text style={{marginRight: "248px", fontSize: "10px"}} className="text-muted d-block">
+                            password must be 8 characters long
+                        </Form.Text>
                     </Form.Group>
+
                     <Button className='mb-3' variant="primary" type="submit">
                         Login
                     </Button>
