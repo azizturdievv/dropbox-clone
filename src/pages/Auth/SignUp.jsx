@@ -55,7 +55,7 @@ export default function SignUp() {
                         Already have an account? <Link to="/login" className='fst-italic text-decoration-underline'>Login</Link>
                     </Form.Text>
                 </Form>
-            </div> 
+            </div>
 
         </AuthContainer>
     )
