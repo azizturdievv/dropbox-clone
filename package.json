@@ -1,7 +1,7 @@
 {
   "name": "dump-box",
   "version": "0.0.0",
-  "homepage": "https://smrnjeet222.github.io/dropbox-clone/",
+  "homepage": "https://github.com/toshtemirov003/dropbox-clone",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
