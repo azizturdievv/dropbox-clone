@@ -30,25 +30,6 @@ export default function SignUp() {
 
     return (
         <AuthContainer>
-            {/* <div>
-                <h3>SignUp </h3>
-                <form onSubmit={onSubmit}>
-                    <br />
-                    <p>Email</p>
-                    <input className="my-6 border-2" type="email" ref={emailRef} required />
-
-                    <p>Password</p>
-                    <input className="my-6 border-2" type="password" ref={pwdRef} required />
-
-                    <p>Confirm Password</p>
-                    <input className="my-6 border-2" type="password" ref={pwdConfirmRef} required />
-                    <br />
-                    <button type="submit" className="px-4 py-2 text-white bg-green-500" >Sign Up</button>
-                </form>
-                <br />
-            </div>
-            <p>Already have an account? <Link to="/login">Login</Link></p> */}
-
 
             <div className='text-center border p-4 rounded' style={{width: "474px", margin: "0 auto", backgroundColor: "info"}}>
                 <h3 className='font-black mb-5'>SignUp</h3>
