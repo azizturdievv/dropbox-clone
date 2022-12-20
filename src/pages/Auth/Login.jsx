@@ -2,6 +2,8 @@ import React, { useRef } from 'react'
 import { useAuth } from '~/hooks/AuthContext';
 import AuthContainer from '~/container/AuthContainer';
 import { Link, useHistory } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 export default function Login() {
 
@@ -22,27 +24,27 @@ export default function Login() {
     };
 
     return (
-        <AuthContainer>
-            <div>
-                <h3>Login </h3>
-                <form onSubmit={onSubmit}>
-                    <br />
-                    <p>Email</p>
-                    <input className="my-6 border-2" type="email" ref={emailRef} required />
+        <AuthContainer>            
+            <div className='text-center border p-4 rounded' style={{width: "474px", margin: "0 auto", backgroundColor: "info"}}>
+                <h3 className='font-black mb-5'>Login </h3>
+                <Form onSubmit={onSubmit}>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label style={{marginRight: "310px"}} >Email address</Form.Label>
+                        <Form.Control style={{width: "400px"}} type="email" ref={emailRef} placeholder="Enter email" autoComplete='off' required />
+                    </Form.Group>
 
-                    <p>Password</p>
-                    <input className="my-6 border-2" type="password" ref={pwdRef} required />
-
-                    <br />
-                    <button type="submit" className="px-4 py-2 text-white bg-green-500" >Log In</button>
-                </form>
-                <br />
-                <br />
-                <Link to="/forgot-password">Forgot Password?</Link>
-                <br />
-                <br />
-            </div>
-            <p>Need an account? <Link to="/sign-up">SignUp</Link></p>
+                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                        <Form.Label style={{marginRight: "340px"}}>Password</Form.Label>
+                        <Form.Control style={{width: "400px"}} type="password" ref={pwdRef} placeholder="Password" autoComplete='off' required />
+                    </Form.Group>
+                    <Button className='mb-3' variant="primary" type="submit">
+                        Login
+                    </Button>
+                    <Form.Text className="text-muted d-block">
+                        Need an account? <Link to="/sign-up" className='fst-italic text-decoration-underline'>SignUp</Link>
+                    </Form.Text>
+                </Form>
+            </div> 
         </AuthContainer>
     )
 }

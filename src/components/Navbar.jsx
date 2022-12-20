@@ -18,11 +18,11 @@ export default function Navbar() {
   }
 
   return (
-    <div className="flex justify-between items-center py-4 px-16 mb-8 bg-purple-400">
+    <div className="flex justify-between items-center py-4 px-16 mb-8 bg-blue-400">
       <Link to="/"
         className="text-2xl font-black"
       >
-        DumpBox
+        DropBox
       </Link>
       <div className="flex items-center gap-6">
         <p className="font-semibold">{curUser.email}</p>

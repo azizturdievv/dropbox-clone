@@ -1,13 +1,13 @@
 import React from 'react'
 import { useAuth } from '~/hooks/AuthContext';
 import Navbar from '~/components/Navbar';
-import AddFolder from '~/components/AddFolder';
+// import AddFolder from '~/components/AddFolder';
 import { useFolder } from '~/hooks/useFolder';
-import Folder from '../../components/Folder';
+// import Folder from '../../components/Folder';
 import { useLocation, useParams } from 'react-router';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { ROOT_FOLDER } from '../../hooks/useFolder';
-import AddFile from '../../components/AddFile';
+import AddFile from '../../components/UploadFile';
 
 export default function Home() {
 
@@ -25,7 +25,7 @@ export default function Home() {
       <Navbar />
       <div className="mx-auto w-3/4">
         <div className="flex justify-between">
-          <div className="flex gap-2 items-end">
+          {/* <div className="flex gap-2 items-end">
             {path.map((d) => (
               <Link key={d.id}
                 to={{
@@ -39,25 +39,27 @@ export default function Home() {
             ))}
             <h2 className="text-2xl font-semibold"> {folder?.name} </h2>
 
-          </div>
+          </div> */}
           <div>
             <AddFile currentFolder={folder} />
-            <AddFolder currentFolder={folder} />
+            {/* <AddFolder currentFolder={folder} /> */}
           </div>
         </div>
         <br />
         <br />
-        <h3 className="text-2xl mb-5">Folders :</h3>
-        <div className="flex gap-5">
+        {/* <h3 className="text-2xl mb-5">Folders :</h3> */}
+        {/* <div className="flex gap-5">
           {childFolders?.map(fldr => (
             <div key={fldr.id} >
               <Folder folder={fldr} />
             </div>
           ))}
-        </div>
+        </div> */}
         <br />
         <br />
-        <h3 className="text-2xl mb-5">Files :</h3>
+        {/* <h3 className="text-2xl mb-5">Files :</h3> */}
+        <hr/>
+        <br />
         <div className="flex gap-5 max-w-4xl flex-wrap">
           {childFiles?.map(fl => (
             <a key={fl.id} href={fl.url} target="_blank"

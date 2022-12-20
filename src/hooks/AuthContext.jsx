@@ -30,14 +30,10 @@ export function AuthProvider({ children }) {
 
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged(user => {
-            console.log(user?.toJSON());
             setCurUser(user);
             setIsAuthenticating(false);
         })
         return unsubscribe;
-        // return () => {
-        //     unsubscribe();
-        // }
     }, [])
 
     const value = { curUser, signUp, login, logout, resetPassword };

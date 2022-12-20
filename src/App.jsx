@@ -4,7 +4,6 @@ import PrivateRoute from '~/container/PrivateRoute';
 import SignUp from '~/pages/Auth/SignUp'
 import Home from '~/pages/Home'
 import Login from '~/pages/Auth/Login'
-import ForgotPassword from '~/pages/Auth/ForgotPassword';
 
 import { AuthProvider } from '~/hooks/AuthContext'
 
@@ -20,7 +19,6 @@ function App() {
           <PrivateRoute exact path="/folder/:folderId" component={Home} />
           <Route exact path="/sign-up" component={SignUp} />
           <Route exact path="/login" component={Login} />
-          <Route exact path="/forgot-password" component={ForgotPassword} />
 
           <Route path="*">
             <Redirect to="/" />
